@@ -1,0 +1,24 @@
+package com.cis4280.berrybundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
+import android.os.Bundle;
+
+public class ListActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_list);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment fragment = fragmentManager.findFragmentById(R.id.list_fragment_container);
+
+        if (fragment == null) {
+            fragment = new ListFragment();
+            fragmentManager.beginTransaction().add(R.id.list_fragment_container, fragment).commit();
+        }
+    }
+}

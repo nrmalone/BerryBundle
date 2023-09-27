@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Berry Bundle</string>
+    <string name="quit_button">Quit</string>
+    <string name="clear_shortDB">Clear Short Game History</string>
+    <string name="clear_DB">Clear Normal Game History</string>
+    <string name="hint">Click the strawberry to start!</string>
+</resources>
